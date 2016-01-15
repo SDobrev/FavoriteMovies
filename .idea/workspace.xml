@@ -101,12 +101,12 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
-                <element signature="e#1055#1096#0" expanded="true" />
-                <element signature="e#1118#1163#0" expanded="true" />
-                <element signature="e#2063#2506#0" expanded="true" />
-                <element signature="e#2505#2506#0" expanded="true" />
+                <element signature="e#1083#1124#0" expanded="true" />
+                <element signature="e#1146#1191#0" expanded="true" />
+                <element signature="e#2056#2499#0" expanded="true" />
+                <element signature="e#2498#2499#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,10 +125,10 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3981982">
-              <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.5099099">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
-                <element signature="e#1895#1953#0" expanded="true" />
+                <element signature="e#1966#2024#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,10 +138,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#335#353#0" expanded="true" />
-                <element signature="e#480#498#0" expanded="true" />
+                <element signature="e#490#508#0" expanded="true" />
+                <element signature="e#635#653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1618,10 +1618,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/DetailActivityFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/DetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/FetchMoviesTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/Utils.java" />
       </list>
     </option>
@@ -1757,7 +1758,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/sdk" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="1c5e33d1" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23_x86" />
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -1977,19 +1978,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#1055#1096#0" expanded="true" />
-            <element signature="e#1118#1163#0" expanded="true" />
-            <element signature="e#2063#2506#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2054,17 +2042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="e#335#353#0" expanded="true" />
-            <element signature="e#480#498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.6666665">
@@ -2083,12 +2060,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#490#508#0" expanded="true" />
+            <element signature="e#635#653#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/MoviesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="e#1083#1124#0" expanded="true" />
+            <element signature="e#1146#1191#0" expanded="true" />
+            <element signature="e#2056#2499#0" expanded="true" />
+            <element signature="e#2498#2499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stoyan/favoritemovies/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3981982">
-          <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.5099099">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
-            <element signature="e#1895#1953#0" expanded="true" />
+            <element signature="e#1966#2024#0" expanded="true" />
           </folding>
         </state>
       </provider>

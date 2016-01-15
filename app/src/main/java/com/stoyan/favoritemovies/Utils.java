@@ -1,6 +1,8 @@
 package com.stoyan.favoritemovies;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.DisplayMetrics;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -11,7 +13,6 @@ import java.util.Arrays;
 public class Utils {
 
     public static final String API_KEY = "a5ce1fb40df99b0a467438d51390c418";
-
     private static final String POSTER_NOT_FOUND_IMAGE = "https://d3a8mw37cqal2z.cloudfront.net/assets/f996aa2014d2ffddfda8463c479898a3/images/no-poster-w185.jpg";
     private static final String POSTER_BASE_PATH = "https://image.tmdb.org/t/p/w185/";
 
@@ -54,6 +55,7 @@ public class Utils {
 
         GridView.LayoutParams layoutParams = new GridView.LayoutParams(movieThumbnailWidth, movieThumbnailHeight);
 
+        // if it's not recycled, initialize some attributes
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         imageView.setLayoutParams(layoutParams);
@@ -64,5 +66,13 @@ public class Utils {
         int position = Arrays.asList(MOVIE_INFO_FIELDS).indexOf(infoToExtract);
         return (movieInfoArray.length > position && !movieInfoArray[position].equals("null"))?movieInfoArray[position]:"";
     }
+
+    public static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 }
+
 
