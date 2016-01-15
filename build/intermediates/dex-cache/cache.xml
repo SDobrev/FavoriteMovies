@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Stoyan\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\jars\libs\internal_impl-21.0.2.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-6077bb039d781d31b1d1e82e2209348b3ad5005c.jar" />
-    </item>
-    <item
-        jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
-        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-a8bc1b1d5f8adfa88abc297409495863ae482d2d.jar" />
-    </item>
-    <item
-        jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-e8816fe6bfa671c0b52aef9eed9b8e078e63d5eb.jar" />
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-8fc3d9eff5feec420f9652c640cf1b825af861cc.jar" />
     </item>
     <item
         jar="C:\Users\Stoyan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-32f79919d32775c74edc73ab3f40217d6c16ab65.jar" />
+        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-32f79919d32775c74edc73ab3f40217d6c16ab65.jar" />
     </item>
     <item
-        jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\jars\libs\internal_impl-21.0.2.jar"
+        jar="C:\Users\Stoyan\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-a517eef7dd603c5e1cd7a6a04e3cc6c8176fba7e.jar" />
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-6077bb039d781d31b1d1e82e2209348b3ad5005c.jar" />
+    </item>
+    <item
+        jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-4bba50e8cc8746007843a6074f1697592706b154.jar" />
+    </item>
+    <item
+        jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-00d4111c2b045856aef23400b428f67008021325.jar" />
     </item>
 
 </items>

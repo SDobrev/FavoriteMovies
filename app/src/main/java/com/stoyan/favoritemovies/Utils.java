@@ -35,19 +35,14 @@ public class Utils {
     public static String buildPosterImageUrl(final String posterImageName){
         String imageUrl = (
                 posterImageName != null
-                && !posterImageName.isEmpty()
-                && !posterImageName.equals("null"))
+                        && !posterImageName.isEmpty()
+                        && !posterImageName.equals("null"))
                 ? POSTER_BASE_PATH + posterImageName
                 : POSTER_NOT_FOUND_IMAGE;
         return imageUrl;
     }
 
     public static void setPosterImageSizeParams(Context context, ImageView imageView){
-
-        // Determine the right sizeForImage
-
-        // Searched on Stack overflow about how to get with and height of the device in pixels
-        // http://stackoverflow.com/questions/6465680/how-to-determine-the-screen-width-in-terms-of-dp-or-dip-at-runtime-in-android
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
 
         // Get the number of rows from resources
@@ -59,15 +54,15 @@ public class Utils {
 
         GridView.LayoutParams layoutParams = new GridView.LayoutParams(movieThumbnailWidth, movieThumbnailHeight);
 
-        // if it's not recycled, initialize some attributes
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         imageView.setLayoutParams(layoutParams);
     }
 
-    public static String extractValueFromMovieInfo(final String infoToExtract, final String movieInfo){
-        String[] movieInfoArray = movieInfo.split("\n");
+    public static String extractValueFromMovieInfo(final String infoToExtract, final Movie movieInfo){
+        String[] movieInfoArray = movieInfo.movieDataSrting.split("\n");
         int position = Arrays.asList(MOVIE_INFO_FIELDS).indexOf(infoToExtract);
         return (movieInfoArray.length > position && !movieInfoArray[position].equals("null"))?movieInfoArray[position]:"";
     }
 }
+
