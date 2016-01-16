@@ -2,18 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-a00596faf099fc4ac7bc688bf19e185ddb0fcd18.jar" />
-    </item>
-    <item
-        jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\classes-19066adca9dc8c5e8f2cdc8952f2b29c4d7585d4.jar" />
+        <dex dex="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-25dacd1498ba58926a0eb39f1516a588d7abf309.jar" />
     </item>
     <item
         jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
@@ -23,11 +16,11 @@
         <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\classes-3b53c5ef367b8af3b872745afc8e859f0b975f1e.jar" />
     </item>
     <item
-        jar="C:\Users\DerMaschine\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jar="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-4d7efb7d206984f17a5ce5c97c2ee711c1857450.jar" />
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-e3f735b30570a4ac94c7e2733c738121a71e0a0a.jar" />
     </item>
     <item
         jar="C:\Users\DerMaschine\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
@@ -35,6 +28,34 @@
         revision="21.1.2"
         sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
         <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\glide-3.5.2-29f24cd6da723338b8ab9d8c46283311869f7764.jar" />
+    </item>
+    <item
+        jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\classes-19066adca9dc8c5e8f2cdc8952f2b29c4d7585d4.jar" />
+    </item>
+    <item
+        jar="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-690aabc6ffeb5316addb7dfcadd289e7c73debce.jar" />
+    </item>
+    <item
+        jar="C:\Users\DerMaschine\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-4d7efb7d206984f17a5ce5c97c2ee711c1857450.jar" />
+    </item>
+    <item
+        jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-a00596faf099fc4ac7bc688bf19e185ddb0fcd18.jar" />
     </item>
 
 </items>
