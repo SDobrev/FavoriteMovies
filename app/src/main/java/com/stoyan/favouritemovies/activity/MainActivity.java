@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.stoyan.favouritemovies.R;
 import com.stoyan.favouritemovies.adapter.ViewPagerAdapter;
@@ -174,6 +175,26 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a
             // fragment transaction.
+            Bundle args = new Bundle();
+            args.putString(Intent.EXTRA_TEXT, movieData);
+
+            DetailActivityFragment fragment = new DetailActivityFragment();
+            fragment.setArguments(args);
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.movie_detail_container, fragment, DETAILFRAGMENT_TAG)
+                    .commit();
+        } else {
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra(Intent.EXTRA_TEXT, movieData);
+            startActivity(intent);
+        }
+    }
+
+    // Not working yet
+    @Override
+    public void onItemLongClick(String movieData){
+        if (mTwoPane) {
             Bundle args = new Bundle();
             args.putString(Intent.EXTRA_TEXT, movieData);
 

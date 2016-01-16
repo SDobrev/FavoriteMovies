@@ -76,6 +76,16 @@ public class MoviesFragment extends Fragment {
 
         mGridView.setAdapter(mMoviesAdapter);
 
+        mGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                String extra = mMoviesAdapter.mData.get(position).dataString;
+
+                ((Callback) getActivity())
+                        .onItemLongClick(extra);
+                return true;
+            }
+        });
 
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -131,5 +141,7 @@ public class MoviesFragment extends Fragment {
          * DetailFragmentCallback for when an item has been selected.
          */
         public void onItemSelected(String movieData);
+
+        public void onItemLongClick(String movieData);
     }
 }
