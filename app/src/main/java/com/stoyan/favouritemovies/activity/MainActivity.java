@@ -1,13 +1,16 @@
 package com.stoyan.favouritemovies.activity;
 
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.stoyan.favouritemovies.R;
 import com.stoyan.favouritemovies.adapter.ViewPagerAdapter;
@@ -118,8 +121,6 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
 
         // Setting the ViewPager For the SlidingTabsLayout
         mTabs.setViewPager(mPager);
-
-
     }
 
     @Override
@@ -156,7 +157,6 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
         super.onResume();
         loadMoviesInCurrentTab();
     }
-
     private void loadMoviesInCurrentTab(){
 
         if(!(mPagerAdapter.getItem(mPager.getCurrentItem()) instanceof MoviesFragment) ) return;

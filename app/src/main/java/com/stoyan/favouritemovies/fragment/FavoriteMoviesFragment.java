@@ -116,6 +116,7 @@ public class FavoriteMoviesFragment extends Fragment implements LoaderManager.Lo
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         // Sort order:  Ascending, by date.
         String sortOrder = MovieContract.MovieEntry._ID + " " + DESC;
+      //  String sortOrder = MovieContract.MovieEntry.COLUMN_RATING + " " + DESC;
 
         return new CursorLoader(getActivity(),
                 MovieContract.MovieEntry.CONTENT_URI,
