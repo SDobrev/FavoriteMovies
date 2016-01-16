@@ -2,11 +2,40 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
         <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-9e7a1f4e63e6804106697dfcd448e9877cc2fa33.jar" />
+=======
+        jar="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-25dacd1498ba58926a0eb39f1516a588d7abf309.jar" />
+    </item>
+    <item
+        jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\classes-3b53c5ef367b8af3b872745afc8e859f0b975f1e.jar" />
+    </item>
+    <item
+        jar="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-e3f735b30570a4ac94c7e2733c738121a71e0a0a.jar" />
+    </item>
+    <item
+        jar="C:\Users\DerMaschine\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\glide-3.5.2-29f24cd6da723338b8ab9d8c46283311869f7764.jar" />
+>>>>>>> origin/master
     </item>
     <item
         jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
@@ -16,11 +45,19 @@
         <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-6f8e382c70fbc842514c9c15c2da25d8ad5e32ad.jar" />
     </item>
     <item
+<<<<<<< HEAD
         jar="C:\Users\Stoyan\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
         <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\glide-3.5.2-5b37d235bfe3b253aca77d7db3817269efab6a2f.jar" />
+=======
+        jar="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="D:\Istensko Programirane\FavoriteMovies\app\build\intermediates\pre-dexed\debug\classes-690aabc6ffeb5316addb7dfcadd289e7c73debce.jar" />
+>>>>>>> origin/master
     </item>
     <item
         jar="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
@@ -30,11 +67,19 @@
         <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-9eb6d048afd0993faeef39baa9c7190aec5a992a.jar" />
     </item>
     <item
+<<<<<<< HEAD
         jar="C:\Users\Stoyan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
         <dex dex="D:\TelerikAcademy\TeamWork\Android\FavoriteMovies\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-1dc68286ff1c3230399fb37efdba5775540d0abd.jar" />
+=======
+        jar="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\DerMaschine\Downloads\Popular-Movies-App-master (1)\Favourite-Movies-App-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-a00596faf099fc4ac7bc688bf19e185ddb0fcd18.jar" />
+>>>>>>> origin/master
     </item>
 
 </items>
