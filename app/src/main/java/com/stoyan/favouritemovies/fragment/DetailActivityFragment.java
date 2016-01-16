@@ -273,6 +273,7 @@ public class DetailActivityFragment extends Fragment {
 
         movieCursor.close();
         handleButtons();
+        Toast.makeText(getActivity(), "Added to Favorites!", Toast.LENGTH_SHORT).show();
     }
 
     public void removeFromFavorites(View view) {
@@ -298,8 +299,8 @@ public class DetailActivityFragment extends Fragment {
         }
 
         movieCursor.close();
-
         handleButtons();
+        Toast.makeText(getActivity(), "Removed from Favorites!", Toast.LENGTH_SHORT).show();
     }
 
     private boolean isFavorite() {

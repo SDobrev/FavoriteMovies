@@ -32,7 +32,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 0 : {
                 MoviesFragment fragment1 = new MoviesFragment();
                 Bundle bundle = new Bundle();
-                bundle.putString(MoviesFragment.SORT, MoviesFragment.favouriteITY_DESC);
+                bundle.putString(MoviesFragment.SORT, MoviesFragment.POPULARITY_DESC);
                 fragment1.setArguments(bundle);
 
                 return fragment1;

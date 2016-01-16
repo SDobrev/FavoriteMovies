@@ -23,7 +23,7 @@ public class MoviesFragment extends Fragment {
 
     private static final String MOVIES_PARCELABLE_KEY = "movies";
 
-    public static final String favouriteITY_DESC = "favouriteity.desc";
+    public static final String POPULARITY_DESC = "popularity.desc";
     public static final String VOTE_AVERAGE_DESC = "vote_average.desc";
     public static final String SORT = "sort";
 

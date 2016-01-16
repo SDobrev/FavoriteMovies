@@ -16,11 +16,11 @@ import com.stoyan.favouritemovies.widget.SlidingTabLayout;
 
 
 public class MainActivity extends AppCompatActivity implements MoviesFragment.Callback {
-    private static final CharSequence MOST_favourite = "favourite";
+    private static final CharSequence MOST_POPULAR = "Popular";
     private static final CharSequence HIGHEST_RATED = "Highest Rated";
     private static final CharSequence FAVORITES = "Favorites";
     private static final int SECOND_PAGER_TAB_INDEX = 1;
-    private static final CharSequence Titles[] = {MOST_favourite, HIGHEST_RATED, FAVORITES};
+    private static final CharSequence Titles[] = {MOST_POPULAR, HIGHEST_RATED, FAVORITES};
     private static final int NUMBOFTABS = 3;
 
     // Declaring Your View and Variables
@@ -123,8 +123,7 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -142,6 +141,12 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
             return true;
         }
 
+        if(id == R.id.action_about){
+            Intent aboutIntent = new Intent(getApplicationContext(), AboutActivity.class);
+            startActivity(aboutIntent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -155,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
 
         if(!(mPagerAdapter.getItem(mPager.getCurrentItem()) instanceof MoviesFragment) ) return;
 
-        String sortBy = getString(R.string.most_favourite_value);
+        String sortBy = getString(R.string.most_popular_value);
 
         if(mPager.getCurrentItem() == SECOND_PAGER_TAB_INDEX ) sortBy = getString(R.string.highest_rated_value);
 

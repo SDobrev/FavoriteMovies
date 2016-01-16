@@ -1,15 +1,17 @@
 <resources>
     <string name="app_name">Favourite Movies</string>
+    <string name="action_about">About</string>
     <string name="action_settings">Settings</string>
     <string name="pref_sort_by_default">favouriteity.desc</string>
     <string name="pref_sort_by_key">sortBy</string>
     <string name="pref_sort_by_label">Sort By</string>
+    <string name="title_activity_about">About</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_detail">Movie Detail</string>
     <string name="content_authority">com.stoyan.favouritemovies</string>
-    <string name="most_favourite">Most favourite</string>
-    <string name="highest_rated">Hisghest Rated</string>
-    <string name="most_favourite_value">favouriteity.desc</string>
+    <string name="most_popular">Most popular</string>
+    <string name="highest_rated">Highest Rated</string>
+    <string name="most_popular_value">popularity.desc</string>
     <string name="highest_rated_value">vote_average.desc</string>
     <string name="mark_favorite">Mark as Favorite</string>
     <string name="unmark_favorite">Remove Favorite</string>
