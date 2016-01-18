@@ -16,7 +16,6 @@ public class MovieProvider extends ContentProvider {
     static final int MOVIES = 100;
     static final int MOVIES_WITH_ID = 101;
 
-
     //movie.movieid = ?
     private static final String sMovieIdSelection =
             MovieContract.MovieEntry.TABLE_NAME +
@@ -181,24 +180,15 @@ public class MovieProvider extends ContentProvider {
         return rowsUpdated;
     }
 
-    // TODO need to implement a better bulk insert
-
-
     /*
      */
     static UriMatcher buildUriMatcher() {
-        // 1) The code passed into the constructor represents the code to return for the root
-        // URI.  It's common to use NO_MATCH as the code for this case. Add the constructor below.
 
         final UriMatcher sURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-
-        // 2) Use the addURI function to match each of the types.  Use the constants from
-        // MovieContract to help define the types to the UriMatcher.
         sURIMatcher.addURI(MovieContract.CONTENT_AUTHORITY, MovieContract.PATH_MOVIE, MOVIES);
         sURIMatcher.addURI(MovieContract.CONTENT_AUTHORITY, MovieContract.PATH_MOVIE + "/*", MOVIES_WITH_ID);
 
-        // 3) Return the new matcher!
         return sURIMatcher;
     }
 }

@@ -41,15 +41,12 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
 
         String movieId;
 
-        // If there's no sortby param
         if (params.length == 0) {
             return null;
         }
 
         movieId = params[0];
 
-        // These two need to be declared outside the try/catch
-        // so that they can be closed in the finally block.
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
@@ -57,7 +54,6 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
         String trailersJsonStr = null;
 
         try {
-            // Construct the URL for the API
             final String MOVIE_BASE_URL =
                     "http://api.themoviedb.org/3/movie/";
 
@@ -75,30 +71,24 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
 
             Log.v(LOG_TAG, "Built URI " + builtUri.toString());
 
-            // Create the request and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod(HttpGet.METHOD_NAME);
             urlConnection.connect();
 
-            // Read the input stream into a String
             InputStream inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
             if (inputStream == null) {
-                // Nothing to do.
                 return null;
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line;
             while ((line = reader.readLine()) != null) {
-                // Since it's JSON, adding a newline isn't necessary (it won't affect parsing)
-                // But it does make debugging a *lot* easier if you print out the completed
-                // buffer for debugging.
+
                 buffer.append(line + "\n");
             }
 
             if (buffer.length() == 0) {
-                // Stream was empty.  No point in parsing.
                 return null;
             }
             trailersJsonStr = buffer.toString();
@@ -106,8 +96,7 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
             Log.v(LOG_TAG, "Trailers string: " + trailersJsonStr);
         } catch (IOException e) {
             Log.e(LOG_TAG, "Error ", e);
-            // If the code didn't successfully get the movies data, there's no point in attemping
-            // to parse it.
+
             return null;
         } finally {
             if (urlConnection != null) {
@@ -129,17 +118,14 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
             e.printStackTrace();
         }
 
-        // This will only happen if there was an error getting or parsing the trailers Data.
         return null;
     }
 
     private ArrayList<Trailer> getTrailersDataFromJson(String moviesJsonStr)
             throws JSONException {
 
-        // These are the names of the JSON objects that need to be extracted.
         final String ROOT_TRAILERS_LIST = "youtube";
 
-        // Define json paths
         final String TRAILER_NAME = "name";
         final String TRAILER_SIZE = "size";
         final String TRAILER_SOURCE = "source";
@@ -155,7 +141,6 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
             String source;
             String type;
 
-            // Get the JSON object representing the movie
             JSONObject trailerObject = movieArray.getJSONObject(i);
 
             name = trailerObject.getString(TRAILER_NAME);

@@ -29,7 +29,6 @@ public class MoviesFragment extends Fragment {
 
     private MoviesAdapter mMoviesAdapter;
     private GridView mGridView;
-    //private String mSortBy;
 
     public MoviesFragment() {
     }
@@ -42,13 +41,7 @@ public class MoviesFragment extends Fragment {
 
         if(savedInstanceState == null || !savedInstanceState.containsKey(MOVIES_PARCELABLE_KEY)){
 
-            // Not using the settings anymore
-            /* SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            String sortBy = prefs.getString(this.getString(R.string.pref_sort_by_key),
-                    this.getString(R.string.pref_sort_by_default));*/
-
             Bundle bundle = this.getArguments();
-            // String sortBy = bundle.getString("sort", getActivity().getString(R.string.most_favourite_value));
             String sortBy = bundle.getString(SORT);
 
             fetchMovies(sortBy);
@@ -131,12 +124,9 @@ public class MoviesFragment extends Fragment {
         return true;
     }
 
-    /**
-     * A callback interface that all activities containing this fragment must
-     * implement. This mechanism allows activities to be notified of item
-     * selections.
-     */
     public interface Callback {
+        void handleShakeEvent(int count);
+
         /**
          * DetailFragmentCallback for when an item has been selected.
          */

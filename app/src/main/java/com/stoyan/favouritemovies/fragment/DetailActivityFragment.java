@@ -63,8 +63,6 @@ public class DetailActivityFragment extends Fragment {
 
         Intent intent = getActivity().getIntent();
 
-
-
         if (null != intent && intent.hasExtra(Intent.EXTRA_TEXT)) {
             mGotData = true;
             String stringExtra = intent.getStringExtra(Intent.EXTRA_TEXT);

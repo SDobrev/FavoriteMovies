@@ -1,5 +1,6 @@
 package com.stoyan.favouritemovies.object;
 
+import android.media.MediaPlayer;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -9,6 +10,8 @@ import java.lang.String;
 
 public class Movie implements Parcelable {
 
+    public static boolean musicCreated = false;
+    public static MediaPlayer mediaPlayer;
     public String dataString;
 
     public Movie(String data) {

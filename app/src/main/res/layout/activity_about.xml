@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:longClickable="false">
 
     <include
         android:id="@+id/tool_bar"
@@ -11,10 +13,20 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAlignment= "center"
+        android:text="Favourite Movies"
+        android:id="@+id/textView"
+        android:theme="@style/AppTheme"
+        android:password="false" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/textView" />
+        android:id="@+id/textViewText" />
 
 </LinearLayout>

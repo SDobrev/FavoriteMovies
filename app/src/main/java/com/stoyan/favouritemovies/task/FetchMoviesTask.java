@@ -41,17 +41,13 @@ public class FetchMoviesTask extends AsyncTask <String, Void, ArrayList<Movie>> 
 
         String sortBy = "vote_average.desc";
 
-        // If there's no sortby param
         if (params.length != 0) {
             sortBy = params[0];
         }
 
-        // These two need to be declared outside the try/catch
-        // so that they can be closed in the finally block.
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
-        // Will contain the raw JSON response as a string.
         String moviesJsonStr = null;
 
         try {
@@ -70,7 +66,6 @@ public class FetchMoviesTask extends AsyncTask <String, Void, ArrayList<Movie>> 
 
             Log.v(LOG_TAG, "Built URI " + builtUri.toString());
 
-            // Create the request and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
@@ -79,21 +74,17 @@ public class FetchMoviesTask extends AsyncTask <String, Void, ArrayList<Movie>> 
             InputStream inputStream = urlConnection.getInputStream();
             StringBuffer buffer = new StringBuffer();
             if (inputStream == null) {
-                // Nothing to do.
                 return null;
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line;
             while ((line = reader.readLine()) != null) {
-                // Since it's JSON, adding a newline isn't necessary (it won't affect parsing)
-                // But it does make debugging a *lot* easier if you print out the completed
-                // buffer for debugging.
+
                 buffer.append(line + "\n");
             }
 
             if (buffer.length() == 0) {
-                // Stream was empty.  No point in parsing.
                 return null;
             }
             moviesJsonStr = buffer.toString();
@@ -101,8 +92,7 @@ public class FetchMoviesTask extends AsyncTask <String, Void, ArrayList<Movie>> 
             Log.v(LOG_TAG, "Movies string: " + moviesJsonStr);
         } catch (IOException e) {
             Log.e(LOG_TAG, "Error ", e);
-            // If the code didn't successfully get the movies data, there's no point in attemping
-            // to parse it.
+
             return null;
         } finally {
             if (urlConnection != null) {
@@ -124,17 +114,14 @@ public class FetchMoviesTask extends AsyncTask <String, Void, ArrayList<Movie>> 
             e.printStackTrace();
         }
 
-        // This will only happen if there was an error getting or parsing the movie.
         return null;
     }
 
     private ArrayList<Movie> getMoviesDataFromJson(String moviesJsonStr)
             throws JSONException {
 
-        // These are the names of the JSON objects that need to be extracted.
         final String ROOT_MOVIES_LIST = "results";
 
-        // Define json paths
         final String MOVIE_ID = "id";
         final String MOVIE_POSTER = "poster_path";
         final String ORIGINAL_TITLE = "original_title";
@@ -154,7 +141,6 @@ public class FetchMoviesTask extends AsyncTask <String, Void, ArrayList<Movie>> 
             String userRating;
             String plotSynopsis;
 
-            // Get the JSON object representing the movie
             JSONObject movieObject = movieArray.getJSONObject(i);
 
             id = movieObject.getString(MOVIE_ID);

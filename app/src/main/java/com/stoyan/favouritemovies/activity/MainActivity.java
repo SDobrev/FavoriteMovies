@@ -1,21 +1,26 @@
 package com.stoyan.favouritemovies.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.stoyan.favouritemovies.R;
+import com.stoyan.favouritemovies.ShakeDetector;
 import com.stoyan.favouritemovies.adapter.ViewPagerAdapter;
 import com.stoyan.favouritemovies.fragment.DetailActivityFragment;
 import com.stoyan.favouritemovies.fragment.MoviesFragment;
+import com.stoyan.favouritemovies.object.Movie;
 import com.stoyan.favouritemovies.widget.SlidingTabLayout;
 
 
@@ -27,7 +32,10 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
     private static final CharSequence Titles[] = {MOST_POPULAR, HIGHEST_RATED, FAVORITES};
     private static final int NUMBOFTABS = 3;
 
-    // Declaring Your View and Variables
+    // The following are used for the shake detection
+    private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private ShakeDetector mShakeDetector;
 
     Toolbar mToolbar;
     ViewPager mPager;
@@ -38,80 +46,53 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
 
     private static final String DETAILFRAGMENT_TAG = "DFTAG";
 
-    //private String mSortBy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mSortBy = prefs.getString(this.getString(R.string.pref_sort_by_key),
-                this.getString(R.string.pref_sort_by_default));*/
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mAccelerometer = mSensorManager
+                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mShakeDetector = new ShakeDetector();
+        mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
 
+            @Override
+            public void onShake(int count) {
+				/*
+				 * The following method, "handleShakeEvent(count):" is a stub //
+				 * method you would use to setup whatever you want done once the
+				 * device has been shook.
+				 */
+                handleShakeEvent(count);
+            }
+        });
 
-        // Creating The Toolbar and setting it as the Toolbar for the activity
+        if (!Movie.musicCreated){
+            Movie.mediaPlayer = MediaPlayer.create(this, R.raw.sandra);
+            Movie.mediaPlayer.start();
+            Movie.musicCreated = true;
+        }
 
         mToolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(mToolbar);
 
-        // Example taken from the SUNSHINE example app
-
-        // Hide the title
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         if (findViewById(R.id.movie_detail_container) != null) {
-            // The detail container view will be present only in the large-screen layouts
-            // (res/layout-sw600dp). If this view is present, then the activity should be
-            // in two-pane mode.
             mTwoPane = true;
-            // In two-pane mode, show the detail view in this activity by
-            // adding or replacing the detail fragment using a
-            // fragment transaction.
-            /*if (savedInstanceState == null) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.movie_detail_container, new DetailActivityFragment(), DETAILFRAGMENT_TAG)
-                        .commit();
-            }*/
         } else {
             mTwoPane = false;
             getSupportActionBar().setElevation(0f);
         }
 
-
-        // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         mPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), Titles, NUMBOFTABS);
 
-        // Assigning ViewPager View and setting the mPagerAdapter
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(mPagerAdapter);
 
-
-        // When the tab changes
-
-        // Unused
-        /*mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                loadMoviesInCurrentTab();
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });*/
-
-        // Assiging the Sliding Tab Layout View
         mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
-        mTabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the mTabs Space Evenly in Available width
+        mTabs.setDistributeEvenly(true);
 
-        // Setting Custom Color for the Scroll bar indicator of the Tab View
         mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
@@ -119,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
             }
         });
 
-        // Setting the ViewPager For the SlidingTabsLayout
         mTabs.setViewPager(mPager);
     }
 
@@ -130,13 +110,28 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
     }
 
     @Override
+    public void handleShakeEvent(int count) {
+
+        if (Movie.mediaPlayer.isPlaying()) {
+
+            Movie.mediaPlayer.pause();
+            Toast.makeText(getApplicationContext(), "Intro Music Off!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Movie.mediaPlayer.start();
+            Toast.makeText(getApplicationContext(),"Intro Music On!", Toast.LENGTH_SHORT).show();
+        }
+
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.woosh);
+        mediaPlayer.start(); // no need to call prepare(); create() does that for you
+
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent settingsIntent = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(settingsIntent);
@@ -154,9 +149,19 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
 
     @Override
     protected void onResume() {
+
         super.onResume();
+        mSensorManager.registerListener(mShakeDetector, mAccelerometer, SensorManager.SENSOR_DELAY_UI);
         loadMoviesInCurrentTab();
     }
+
+    @Override
+    public void onPause() {
+        // Add the following line to unregister the Sensor Manager onPause
+        mSensorManager.unregisterListener(mShakeDetector);
+        super.onPause();
+    }
+
     private void loadMoviesInCurrentTab(){
 
         if(!(mPagerAdapter.getItem(mPager.getCurrentItem()) instanceof MoviesFragment) ) return;
@@ -172,9 +177,7 @@ public class MainActivity extends AppCompatActivity implements MoviesFragment.Ca
     @Override
     public void onItemSelected(String movieData) {
         if (mTwoPane) {
-            // In two-pane mode, show the detail view in this activity by
-            // adding or replacing the detail fragment using a
-            // fragment transaction.
+
             Bundle args = new Bundle();
             args.putString(Intent.EXTRA_TEXT, movieData);
 

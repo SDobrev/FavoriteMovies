@@ -2,12 +2,14 @@ package com.stoyan.favouritemovies.activity;
 
 import com.stoyan.favouritemovies.R;
 import com.stoyan.favouritemovies.ShakeDetector;
+import com.stoyan.favouritemovies.object.Movie;
 
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -50,7 +52,19 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void handleShakeEvent(int count) {
-        Toast.makeText(getApplicationContext(),"Shake", Toast.LENGTH_SHORT).show();
+
+        if (Movie.mediaPlayer.isPlaying()) {
+            Movie.mediaPlayer.pause();
+            Toast.makeText(getApplicationContext(),"Intro Music Off!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Movie.mediaPlayer.start();
+            Toast.makeText(getApplicationContext(),"Intro Music On!", Toast.LENGTH_SHORT).show();
+        }
+
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.woosh);
+        mediaPlayer.start(); // no need to call prepare(); create() does that for you
+
     }
 
     @Override
