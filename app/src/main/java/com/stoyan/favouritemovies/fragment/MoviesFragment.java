@@ -110,7 +110,7 @@ public class MoviesFragment extends Fragment {
         if(getActivity() == null) return false;
 
         if(!Utils.isNetworkAvailable(getActivity())){
-            // show toast if no network
+
             String text = "No Internet Connectivity";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(getActivity(),text, duration);
@@ -127,9 +127,7 @@ public class MoviesFragment extends Fragment {
     public interface Callback {
         void handleShakeEvent(int count);
 
-        /**
-         * DetailFragmentCallback for when an item has been selected.
-         */
+
         public void onItemSelected(String movieData);
 
         public void onItemLongClick(String movieData);

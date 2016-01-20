@@ -41,21 +41,17 @@ public class ReviewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // Get the data item for this position
         Review review = (Review) mData.get(position);
-        // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_review, parent, false);
         }
-        // Lookup view
+
         TextView tvAuthor = (TextView) convertView.findViewById(R.id.review_author);
         TextView tvContent = (TextView) convertView.findViewById(R.id.review_content);
 
-        // Populate the data into the template view using the data object
         tvAuthor.setText(review.mAuthor);
         tvContent.setText(review.mContent);
 
-        // Return the completed view to render on screen
         return convertView;
     }
 

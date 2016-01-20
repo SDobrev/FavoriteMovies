@@ -40,7 +40,6 @@ public class FetchReviewsTask extends AsyncTask <String, Void, ArrayList<Review>
 
         String movieId;
 
-        // If there's no sortby param
         if (params.length == 0) {
             return null;
         }
@@ -50,7 +49,6 @@ public class FetchReviewsTask extends AsyncTask <String, Void, ArrayList<Review>
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
-        // Will contain the raw JSON response as a string.
         String trailersJsonStr = null;
 
         try {
@@ -90,7 +88,6 @@ public class FetchReviewsTask extends AsyncTask <String, Void, ArrayList<Review>
             }
 
             if (buffer.length() == 0) {
-                // Stream was empty.  No point in parsing.
                 return null;
             }
             trailersJsonStr = buffer.toString();

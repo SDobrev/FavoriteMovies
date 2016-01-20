@@ -42,18 +42,14 @@ public class MoviesAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // Create the ImageView to return
         ImageView imageItemView;
         if (convertView == null) {
-            // if it's not recycled, create and set the attributes
             imageItemView = new ImageView(mContext);
             Utils.setPosterImageSizeParams(mContext, imageItemView);
         } else {
-            // this image should have the properties already set
             imageItemView = (ImageView) convertView;
         }
 
-         // set the image url
         String imageName = Utils.extractValueFromMovieInfo(Utils.MOVIE_POSTER_FIELD,mData.get(position));
         Glide.with(mContext).load(Utils.buildPosterImageUrl(imageName)).into(imageItemView);
 

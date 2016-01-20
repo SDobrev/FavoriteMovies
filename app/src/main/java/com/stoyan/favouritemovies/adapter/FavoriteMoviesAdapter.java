@@ -34,9 +34,7 @@ public class FavoriteMoviesAdapter extends CursorAdapter {
         return VIEW_TYPE_COUNT;
     }
 
-    /**
-     *
-     */
+
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         // if it's not recycled, create and set the attributes
@@ -45,9 +43,6 @@ public class FavoriteMoviesAdapter extends CursorAdapter {
         return imageItemView;
     }
 
-    /*
-        This is where we fill-in the views with the contents of the cursor.
-     */
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
 

@@ -50,7 +50,6 @@ public class FetchTrailersTask extends AsyncTask <String, Void, ArrayList<Traile
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
-        // Will contain the raw JSON response as a string.
         String trailersJsonStr = null;
 
         try {

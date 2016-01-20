@@ -41,19 +41,15 @@ public class TrailerAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // Get the data item for this position
         Trailer trailer = (Trailer) mData.get(position);
-        // Check if an existing view is being reused, otherwise inflate the view
+
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_trailer, parent, false);
         }
-        // Lookup view
         TextView tvName = (TextView) convertView.findViewById(R.id.trailer_title);
 
-        // Populate the data into the template view using the data object
         tvName.setText(trailer.mName);
 
-        // Return the completed view to render on screen
         return convertView;
     }
 

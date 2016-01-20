@@ -62,10 +62,6 @@ public class Utils {
 
     public static void setPosterImageSizeParams(Context context, ImageView imageView){
 
-        // Determine the right sizeForImage
-
-        // Searched on Stack overflow about how to get with and height of the device in pixels
-        // http://stackoverflow.com/questions/6465680/how-to-determine-the-screen-width-in-terms-of-dp-or-dip-at-runtime-in-android
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
 
         // Get the number of rows from resources
@@ -91,8 +87,6 @@ public class Utils {
         return (movieInfoArray.length > position && !movieInfoArray[position].equals("null"))?movieInfoArray[position]:"";
     }
 
-    // From instructor review (Modified to add the Context parameter and made it public)
-    //Based on a stackoverflow snippet
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -111,14 +105,10 @@ public class Utils {
         }
     }
 
-    // From stackoverfow website
-    /**** Method for Setting the Height of the ListView dynamically.
-     **** Hack to fix the issue of not showing all the items of the ListView
-     **** when placed inside a ScrollView  ****/
     public static void setListViewHeightBasedOnChildren(ListView listView) {
         ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter == null) {
-            // pre-condition
+
             return;
         }
 
@@ -128,7 +118,6 @@ public class Utils {
             View listItem = listAdapter.getView(i, null, listView);
 
             if(listItem != null){
-                // This next line is needed before you call measure or else you won't get measured height at all. The listitem needs to be drawn first to know the height.
                 listItem.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
                 listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
                 totalHeight += listItem.getMeasuredHeight();

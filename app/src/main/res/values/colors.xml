@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Material Colors-->
-    <color name="primary">#009688</color>
-    <color name="primary_dark">#00796B</color>
+    <color name="primary">#119400</color>
+    <color name="primary_dark">#007000</color>
     <color name="primary_light">#B2DFDB</color>
     <color name="accent">#FF5252</color>
 
